@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Recycle Puzzle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>♻️ 環保拼圖遊戲</h1>
+
+  <!-- 分類選擇 -->
+  <div id="category-select">
+    <h2>請選擇分類挑戰</h2>
+    <div class="category" onclick="startGame('paper')">
+      <img src="image/paper.jpg" alt="Paper" />
+      <p>紙類</p>
+    </div>
+    <div class="category" onclick="startGame('plastic')">
+      <img src="image/plastic.jpg" alt="Plastic" />
+      <p>塑膠類</p>
+    </div>
+    <div class="category" onclick="startGame('glass')">
+      <img src="image/glass.jpg" alt="Glass" />
+      <p>玻璃類</p>
+    </div>
+    <div class="category" onclick="startGame('aluminum')">
+      <img src="image/aluminum.jpg" alt="Aluminum" />
+      <p>鋁罐類</p>
+    </div>
+  </div>
+
+  <!-- 拼圖區 -->
+  <div id="puzzle-game" class="hidden">
+    <h2>拖曳拼圖碎片到正確位置</h2>
+    <div class="game-container">
+      <div id="pieces-container"></div>
+      <div id="puzzle-board"></div>
+    </div>
+
+    <div class="button-group">
+      <button class="blue-btn" onclick="checkPuzzle()">✅ 完成拼圖</button>
+      <button class="pink-btn" onclick="playExplanationAudio()">🔊 圖片說明</button>
+      <button class="green-btn" onclick="restartGame()">🔁 重新開始</button>
+    </div>
+
+    <!-- AI 圖片解釋區 -->
+    <div id="explanation" class="hidden">
+      <h3>這是什麼呢？</h3>
+      <img id="explanation-img" src="" alt="explanation" />
+    </div>
+  </div>
+<audio id="audio-player"></audio>
+<audio id="background-music" src="audio/bgm.mp3" autoplay loop></audio>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
