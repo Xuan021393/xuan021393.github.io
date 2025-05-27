@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>AI環保小偵探</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>♻️ AI環保小偵探 ♻️</h1>
+
+  <div id="game-container">
+    <div id="background-container">
+      <img src="image/park.png" alt="背景圖" id="background">
+      <div id="trash-area"></div>
+    </div>
+
+    <div id="bins">
+      <div class="bin" data-type="aluminum_can">
+        <img src="image/aluminum_can.png" alt="鋁罐桶">
+        <p>鋁罐類</p>
+      </div>
+      <div class="bin" data-type="carton">
+        <img src="image/carton.png" alt="紙類桶">
+        <p>紙類</p>
+      </div>
+      <div class="bin" data-type="bottle">
+        <img src="image/bottle.png" alt="寶特瓶桶">
+        <p>寶特瓶</p>
+      </div>
+      <div class="bin" data-type="glass">
+        <img src="image/glass.png" alt="玻璃桶">
+        <p>玻璃類</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="info">
+    <p id="score">分數：0</p>
+    <p id="timer">倒數：30 秒</p>
+    <button onclick="restartGame()">重新開始</button>
+  </div>
+
+
+  <audio id="correct-sound" src="audio/correct.mp3"></audio>
+  <audio id="wrong-sound" src="audio/wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
